@@ -5,7 +5,7 @@ console.log(document);
 const ctaBtn = document.getElementById('cta-btn');
 const destinationsList = document.getElementById('destinations-list');
 
-ctaBtn.addEventListener('click', (event) => {
+const handleCtaBtnClick = (event) => {
   console.log('hello from button!');
   console.log(event.target);
 
@@ -21,7 +21,9 @@ ctaBtn.addEventListener('click', (event) => {
     const destHtml = `<li>${dest}</li>`;
     destinationsList.innerHTML += destHtml;
   }
-});
+};
+
+ctaBtn.addEventListener('click', handleCtaBtnClick);
 
 // document.addEventListener('click', (event) => {
 //   console.log('hello from document click!');
